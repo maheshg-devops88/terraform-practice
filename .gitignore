@@ -1,0 +1,34 @@
+# Local .terraform directories (contains provider plugins and modules)
+**/.terraform/*
+
+# .terraform.lock.hcl managed dependency lock file
+# Note: HashiCorp recommends committing this file to version control so 
+# that teams use identical provider versions. Uncomment if you want to ignore it.
+#.terraform.lock.hcl
+
+# State files (contains infrastructure metadata and potentially sensitive data)
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Exclude all variable files (often contain secrets and credentials)
+*.tfvars
+*.tfvars.json
+
+# Exclude override files (local modifications)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Include override files for team-wide use if explicitly required (negation example)
+# !example_override.tf
+
+# CLI configuration files
+.terraformrc
+terraform.rc
+.terraform/*
+.terraform.lock.hcl
