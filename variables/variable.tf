@@ -11,7 +11,7 @@ variable "ami_id" {
 }
 
 variable "ec2_tags" {
-  type = map() 
+  type = map 
   default = {
      Name = "var-demo"
      Env  = "dev"
@@ -41,12 +41,12 @@ variable "sg_to_port" {
 }
 
 variable "cidr_blocks" {
-  type = list()
+  type = list
   default = ["0.0.0.0/0"]
 }
 
 variable "sg_tags" {
-  type = map() 
+  type = map 
   default = {
      Env  = "dev"
      Project = "Roboshop"
