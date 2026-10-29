@@ -4,6 +4,7 @@ resource "aws_route53_record" "demo-rt53" {
   name    = "${var.Instances[count.index]}.${var.domain_name}"
   type    = "A"
   ttl     = "2"
-  records = [ aws_instance.demo[count.index].private_ip ]
+  #records = [ aws_instance.demo[count.index].private_ip ]
+  records = [ aws_instance.demo[index(var.Instances,"frontend")].publicip]
   allow_overwrite = true
 }
