@@ -5,6 +5,8 @@ terraform {
       version = "> 6.0.0"
     }
   }
+
+
 }
 
 # configure the aws provider
@@ -12,3 +14,4 @@ terraform {
 provider "aws" {
   region = "us-east-1"
 }
+

@@ -70,5 +70,5 @@ variable "domain_name" {
 
 variable "instances" {
   type = list 
-  default = ["mongodb","redis"]
+  default = ["mongodb","frontend"]
 }
