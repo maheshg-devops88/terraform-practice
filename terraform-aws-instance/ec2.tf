@@ -1,13 +1,6 @@
-resource "aws_instance" "demo" {
+resource "aws_instance" "main" {
   ami                    = var.ami_id
   instance_type          = var.instance_type
-  vpc_security_group_ids = [aws_security_group.demo_sg.id]
-  tags = {
-    Name = "terraform_vm"
-    Project = "Roboshop"
-  }
-
-
-  
+  vpc_security_group_ids = var.sg_ids
+  tags                   = local.ec2_final_tags
 }
-
